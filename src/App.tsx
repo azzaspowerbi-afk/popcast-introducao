@@ -12,6 +12,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.vers
 // Helper to transform common cloud storage links to direct PDF links
 const getDirectPdfUrl = (url: string | null) => {
   if (!url) return null;
+  if (url.startsWith('/')) return url;
   if (!url.startsWith('http')) return url; // Blob URLs or local paths
 
   try {
