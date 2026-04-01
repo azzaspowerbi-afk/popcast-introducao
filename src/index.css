@@ -1,11 +1,10 @@
 @import "tailwindcss";
 
-@layer base {
-  html, body, #root {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100vh;
-    background-color: #0f172a;
-  }
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Evita barra de rolagem lateral chata */
+  background-color: #0d1b2a; /* Use o SEU azul aqui */
 }
